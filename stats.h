@@ -2,9 +2,9 @@
 
 typedef struct _stats
 {
-    int average;
-    int min;
-    int max;
+    float average;
+    float min;
+    float max;
 }Stats;
 
 namespace Statistics {
