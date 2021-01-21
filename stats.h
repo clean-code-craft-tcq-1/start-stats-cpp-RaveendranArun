@@ -4,7 +4,7 @@ typedef struct _stats
 {
     int average;
     int min;
-    int max
+    int max;
 }Stats;
 
 namespace Statistics {
