@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
+#include <cmath>
 
 typedef struct _stats
 {
