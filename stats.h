@@ -1,4 +1,6 @@
 #include <vector>
+#include <algorithm>
+#include <iterator>
 
 typedef struct _stats
 {
