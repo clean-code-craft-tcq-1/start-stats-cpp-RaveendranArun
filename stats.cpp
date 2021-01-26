@@ -10,5 +10,10 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& val) {
         sum += *i;
     retStats.average = sum / (float)val.size();
     
+    /* Find the minimum of the vector */
+    retStats.min = *min_element(val.begin(), val.end());
+    /* Find the maximum of the vector */
+    retStats.max = *max_element(arr.begin(), arr.end());
+    
     return retStats;
 }
