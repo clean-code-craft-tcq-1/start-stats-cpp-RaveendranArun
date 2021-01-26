@@ -13,7 +13,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& val) {
     /* Find the minimum of the vector */
     retStats.min = *min_element(val.begin(), val.end());
     /* Find the maximum of the vector */
-    retStats.max = *max_element(arr.begin(), arr.end());
+    retStats.max = *max_element(val.begin(), val.end());
     
     return retStats;
 }
