@@ -35,3 +35,16 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& val) {
     
     return retStats;
 }
+
+/* Constructor of class EmailAlert */
+EmailAlert::EmailAlert() : emailSent(flase)
+{   
+}
+
+/* Constructor for class LEDAlert */
+LEDAlert::LEDAlert() : ledGlows(false)
+{
+}
+
+/* Setting the email alert */
+Email
