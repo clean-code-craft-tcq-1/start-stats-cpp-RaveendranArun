@@ -31,7 +31,7 @@ class EmailAlert : public IAlerter
         
 };
 
-class LEDAlert : public IAlert
+class LEDAlert : public IAlerter
 {
     public:
         LEDAlert();
@@ -43,7 +43,7 @@ class StatsAlerter
 {
     private:
         float m_maxThreshold;
-        std::vecor<IAlerter*> m_alerter;
+        std::vector<IAlerter*> m_alerter;
     
      public:
         StatsAlerter(const float maxThreshold, std::vector<IAlerter*>& alertList);
