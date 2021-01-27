@@ -16,12 +16,14 @@ namespace Statistics {
     Stats ComputeStatistics(const std::vector<float>& val);
 }
 
+/* Abstract class IAlerter */
 class IAlerter
 {
     public:
         virtual void setAlert(bool alertStatus) = 0;
 };
 
+/* Class declaration for EmailAlert */
 class EmailAlert : public IAlerter
 {
     public:
@@ -31,6 +33,7 @@ class EmailAlert : public IAlerter
         
 };
 
+/* Class declaration for LED alert */
 class LEDAlert : public IAlerter
 {
     public:
@@ -39,6 +42,7 @@ class LEDAlert : public IAlerter
         virtual void setAlert(bool alertStatus);
 };
 
+/* Class declaration for setting the alerts */
 class StatsAlerter
 {
     private:
