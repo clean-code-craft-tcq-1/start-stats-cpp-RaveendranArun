@@ -47,15 +47,15 @@ LEDAlert::LEDAlert() : ledGlows(false)
 }
 
 /* Setting the email alert */
-EmailAlert::setAlert(bool emailStatAlert)
+EmailAlert::setAlert(bool alertStatus)
 {
-    this->emailSent = emailStatAlert;
+    this->emailSent = alertStatus;
 }
 
 /* Setting the LED alert */
-LEDAlert::setAlert(bool LEDStatAlert)
+LEDAlert::setAlert(bool alertStatus)
 {
-    this->ledGlows = LEDStatAlert;
+    this->ledGlows = alertStatus;
 }
 
 /* Constructor for StatsAlerter */
