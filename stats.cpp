@@ -71,7 +71,7 @@ void StatsAlerter::checkAndAlert(const std::vector<float>& val)
     
     if (computedStats.max > m_maxThreshold)
     {
-        alertFlag = true
+        alertFlag = true;
     }
     
     for (auto iter = m_alerterList.begin(); iter != m_alerterList.end(); ++iter)
