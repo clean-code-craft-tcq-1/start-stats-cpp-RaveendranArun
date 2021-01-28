@@ -47,13 +47,13 @@ LEDAlert::LEDAlert() : ledGlows(false)
 }
 
 /* Setting the email alert */
-EmailAlert::setAlert(bool alertStatus)
+void EmailAlert::setAlert(bool alertStatus)
 {
     this->emailSent = alertStatus;
 }
 
 /* Setting the LED alert */
-LEDAlert::setAlert(bool alertStatus)
+void LEDAlert::setAlert(bool alertStatus)
 {
     this->ledGlows = alertStatus;
 }
@@ -64,7 +64,7 @@ StatsAlerter::StatsAlerter(const float threshold, std::vector<IAlerter*>& alertL
     
 }
 
-StatsAlerter::checkAndAlert(const std::vector<float>& val)
+void StatsAlerter::checkAndAlert(const std::vector<float>& val)
 {
     bool alertFlag = false;
     auto computedStats = Statistics::ComputeStatistics(val);
