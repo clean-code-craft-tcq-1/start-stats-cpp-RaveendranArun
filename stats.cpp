@@ -37,7 +37,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& val) {
 }
 
 /* Constructor of class EmailAlert */
-EmailAlert::EmailAlert() :: emailSent(false)
+EmailAlert::EmailAlert() : emailSent(false)
 {   
 }
 
