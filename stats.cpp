@@ -47,4 +47,36 @@ LEDAlert::LEDAlert() : ledGlows(false)
 }
 
 /* Setting the email alert */
-Email
+EmailAlert::setAlert(boot emailStatAlert)
+{
+    this->emailSent = emailStatAlert;
+}
+
+/* Setting the LED alert */
+LEDAlert::setAlert(bool LEDStatAlert)
+{
+    this->ledGlows = LEDStatAlert;
+}
+
+/* Constructor for StatsAlerter */
+StatsAlerter::StatsAlerter(const float threshold, std::vector<IAlerter*>& alertList) : m_maxThreshold(threshold), m_alerterList(alertList) 
+{
+    
+}
+
+StatsAlerter::checkAndAlert(const std::vector<float>& val)
+{
+    bool alertFlag = false;
+    auto computedStats = Statistics::ComputeStatistics(val);
+    
+    if (computedStats.max > m_maxThreshold)
+    {
+        alertFlag = true
+    }
+    
+    for (auto iter = m_alerterList.begin(); iter != m_alerterList.end(); ++iter)
+    {
+        (*iter)->setAlert(alertFlag);
+    }
+}
+
